@@ -8,6 +8,6 @@ export default class Listener {
       if (event.target.dataset.id === 'del') {
         this.drawUI.delTask(element);
       }
-    })
+    });
   }
 }

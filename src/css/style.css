@@ -38,7 +38,8 @@ body {
 
 .tasks-list-field {
   display: flex;
-  padding: 10px 5px 10px 5px;
+  padding: 10px 15px 10px 10px;
+  border-radius: 10px;
   flex-direction: column;
   background-color: #808080;
   width: 100%;

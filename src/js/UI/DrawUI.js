@@ -5,6 +5,7 @@ export default class DrawUI {
     this.listener = new Listener(this);
     this.inputField = null;
     this.taskListField = document.getElementById('tasks-list-field');
+    this.elementToRemove = null;
   }
 
   init() {
@@ -20,7 +21,7 @@ export default class DrawUI {
     delTaskButton.className = 'del-task-button';
     delTaskButton.innerText = 'x';
     delTaskButton.setAttribute('data-id', 'del');
-    
+
     newTask.append(delTaskButton);
     this.taskListField.append(newTask);
 
@@ -28,7 +29,8 @@ export default class DrawUI {
   }
 
   delTask(element) {
-    element.remove();
+    this.elementToRemove = element;
+    this.elementToRemove.remove();
   }
 
   clearInput() {
